@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>F1 Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>F1 Dashboard</h1>
+    <section id="race_details">
+        <h2>Race Name: <span id="race_name"></span></h2>
+        <h2>Circuit Name: <span id="circuit_name"></span></h2>
+        <h2>Circuit Location: <span id="circuit_location"></span></h2>
+        <h2>Race Date: <span id="race_date">-</span></h2>
+        <h2>Next Event: <span id="next_event">-</span></h2>
+        <h2>Countdown: <span id="countdown">-</span></h2>
+    </section>
+    <section id="driver_standings">
+        <h2>Current Drivers Standings</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Driver</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody id="standings_driver">
+                <!-- Standings will be populated here -->
+            </tbody>
+        </table>
+    </section>
+        <section id="constructor_standings">
+        <h2>Current Constructors Standings</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody id="standings_constructor">
+                <!-- Standings will be populated here -->
+            </tbody>
+        </table>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
