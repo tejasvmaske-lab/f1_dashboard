@@ -87,7 +87,7 @@ f1-dashboard/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/f1-dashboard.git
+git clone https://github.com/tejasvmaske-lab/f1-dashboard.git
 ```
 
 2. Open the project folder
