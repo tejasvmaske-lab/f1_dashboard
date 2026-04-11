@@ -6,9 +6,9 @@
 }
 
 body {
-    background-color: #0b0b0b;
-    color: #ffffff;
-    padding: 20px;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  padding: 20px;
 }
 
 h1 {
@@ -24,9 +24,17 @@ h2 {
 section {
   background: #111;
   padding: 20px;
-  margin-bottom: 20px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex: 1;
+  min-width: 300px;
+}
+
+.standings-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 table {
@@ -43,14 +51,19 @@ th {
 
 td {
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 tr:hover {
   background: rgba(255, 255, 255, 0.05);
 }
 
-#countdown, #race_name, #circuit_name, #circuit_location, #race_date, #next_event {
+#countdown,
+#race_name,
+#circuit_name,
+#circuit_location,
+#race_date,
+#next_event {
   font-size: 1.5rem;
   font-weight: bold;
   color: #3a9e4e;
@@ -68,6 +81,61 @@ tr:hover {
   background: rgba(205, 127, 50, 0.15);
 }
 
-.gold td, .silver td, .bronze td {
+.gold td,
+.silver td,
+.bronze td {
   font-weight: bold;
+}
+
+/* Team Accents */
+.accent-red_bull {
+  border-left: 4px solid #3671C6;
+}
+
+.accent-ferrari {
+  border-left: 4px solid #E8002D;
+}
+
+.accent-mercedes {
+  border-left: 4px solid #27F4D2;
+}
+
+.accent-mclaren {
+  border-left: 4px solid #FF8000;
+}
+
+.accent-aston_martin {
+  border-left: 4px solid #229971;
+}
+
+.accent-alpine {
+  border-left: 4px solid #0093CC;
+}
+
+.accent-williams {
+  border-left: 4px solid #64C4FF;
+}
+
+.accent-rb {
+  border-left: 4px solid #6692FF;
+}
+
+.accent-audi {
+  border-left: 4px solid #313231;
+}
+
+.accent-haas {
+  border-left: 4px solid #B6BABD;
+}
+
+.accent-cadillac {
+  border-left: 4px solid #c2cbc2;
+}
+
+tr {
+  transition: all 0.2s ease;
+}
+
+td {
+  padding: 10px 8px;
 }
