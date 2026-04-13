@@ -114,6 +114,9 @@ git clone https://github.com/tejasvmaske-lab/f1-dashboard.git
 
 ---
 
+## Live Demo
+https://tejasvmaske-lab.github.io/f1_dashboard/
+
 ## ⭐ If you like this project
 
 Give it a star ⭐ on GitHub!
