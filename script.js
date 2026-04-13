@@ -6,6 +6,34 @@ fetch("https://api.jolpi.ca/ergast/f1/current.json")
         const nextRace = races.find(race => {
             return new Date(race.date + "T" + race.time) > now;
         });
+
+        const trackImages = {
+            "Australian Grand Prix": "components/tracks/aus.png",
+            "Chinese Grand Prix": "components/tracks/china.png",
+            "Japanese Grand Prix": "components/tracks/jpn.png",
+            "Miami Grand Prix": "components/tracks/miami.png",
+            "Canadian Grand Prix": "components/tracks/canada.png",
+            "Monaco Grand Prix": "components/tracks/monaco.png",
+            "Spanish Grand Prix": "components/tracks/spain.png",
+            "Austrian Grand Prix": "components/tracks/austria.png",
+            "British Grand Prix": "components/tracks/gb.png",
+            "Belgian Grand Prix": "components/tracks/belgium.png",
+            "Hungarian Grand Prix": "components/tracks/hungary.png",
+            "Dutch Grand Prix": "components/tracks/netherlands.png",
+            "Italian Grand Prix": "components/tracks/italy.png",
+            "Azerbaijan Grand Prix": "components/tracks/azerbaijan.png",
+            "Singapore Grand Prix": "components/tracks/singapore.png",
+            "United States Grand Prix": "components/tracks/usa.png",
+            "Mexico City Grand Prix": "components/tracks/mexico.png",
+            "São Paulo Grand Prix": "components/tracks/brazil.png",
+            "Las Vegas Grand Prix": "components/tracks/la.png",
+            "Qatar Grand Prix": "components/tracks/qatar.png",
+            "Abu Dhabi Grand Prix": "components/tracks/uae.png",
+            "Barcelona Grand Prix": "components/tracks/barcelona.png"
+        };
+
+        document.getElementById("track_image").src = trackImages[nextRace.raceName];
+
         console.log(nextRace.raceName);
         console.log(nextRace.date);
 
@@ -116,4 +144,3 @@ fetch("https://api.jolpi.ca/ergast/f1/current/constructorStandings.json")
             tableBody.appendChild(row);
         });
     })
-
