@@ -78,7 +78,26 @@ fetch("https://api.jolpi.ca/ergast/f1/current.json")
         document.getElementById("race_date").innerText = nextRace.date;
         document.getElementById("circuit_name").innerText = nextRace.Circuit.circuitName;
         document.getElementById("circuit_location").innerText = `${nextRace.Circuit.Location.locality}, ${nextRace.Circuit.Location.country}`;
-    });
+    })
+
+    .catch(error => {
+    console.log("Race API Error:", error);
+
+    document.getElementById("race_name").innerText =
+      "Unable to load race data";
+
+    document.getElementById("race_date").innerText = "Please try again later";
+    document.getElementById("next_event").innerText = "Data unavailable";
+    document.getElementById("countdown").innerText = "Retry later";
+
+    document.getElementById("circuit_name").innerText =
+      "No circuit data";
+
+    document.getElementById("circuit_location").innerText =
+      "Please try again later";
+
+    document.getElementById("track_image").style.display = "none";
+});
 
 fetch("https://api.jolpi.ca/ergast/f1/current/driverStandings.json")
     .then(res => res.json())
@@ -113,6 +132,13 @@ fetch("https://api.jolpi.ca/ergast/f1/current/driverStandings.json")
         });
     })
 
+    .catch(error => {
+    console.log("Race API Error:", error);
+    document.getElementById("race_name").innerText =
+      "Unable to load race  data";
+    document.getElementById("standings_driver").innerText = "Unable to load driver standings";
+});
+
 fetch("https://api.jolpi.ca/ergast/f1/current/constructorStandings.json")
     .then(res => res.json())
     .then(data => {
@@ -144,6 +170,14 @@ fetch("https://api.jolpi.ca/ergast/f1/current/constructorStandings.json")
             tableBody.appendChild(row);
         });
     })
+
+        .catch(error => {
+    console.log("Race API Error:", error);
+    document.getElementById("race_name").innerText =
+      "Unable to load race  data";
+    document.getElementById("standings_constructor").innerText = "Unable to load constructor standings";
+});
+
 
 window.onload = function(){
   const loader = document.getElementById("loader");

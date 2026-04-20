@@ -213,3 +213,7 @@ td {
     opacity: 1;
   }
 }
+
+.error-text{
+  color: #ff4d4d;
+}
